@@ -91,8 +91,8 @@ class _HomePageState extends State<HomePage> {
   onSearch(String search) {
     setState(() {
       _foundedUsers = _users.where((user) => user.name.toLowerCase().contains(search)).toList();
-        _foundedUsers = _users.where((username) => user.name.toLowerCase().contains(search)).toList();
-        _foundedUsers = _users.where((catogories) => user.name.toLowerCase().contains(search)).toList();
+        _foundedUsers = _users.where((user) => user.username.toLowerCase().contains(search)).toList();
+        _foundedUsers = _users.where((user) => user.catogories.toLowerCase().contains(search)).toList();
     });
   }
 
